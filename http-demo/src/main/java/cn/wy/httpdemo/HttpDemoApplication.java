@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication
-@MapperScan(basePackages="cn.wy.http.mapper")
+@MapperScan(basePackages="cn.wy.httpdemo.mapper")
 public class HttpDemoApplication {
 
     public static void main(String[] args) {

@@ -1,28 +1,26 @@
-package cn.wy.httpdemo.controller;
+package cn.wy.server1.controller;
 
-import cn.wy.httpdemo.entity.User;
+import cn.wy.server1.entity.User;
+import cn.wy.server1.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
 
-import java.util.HashMap;
 import java.util.Map;
 
 @RestController
 public class IndexController {
 
     @Autowired
-    private RestTemplate restTemplate;
+    private UserService userService;
 
     @RequestMapping("/getUser")
     public User getUser(
-            @RequestParam String id
-    ){
-        Map<String,String> a = new HashMap<String,String>();
-        a.put("id",id);
-        User user = restTemplate.getForObject("http://localhost:8088/getUser",User.class,a);
+            @RequestParam Map<String,String> m
+            ){
+        String id = m.get("id");
+        User user = userService.getUserById(id);
         return user;
     }
 }
