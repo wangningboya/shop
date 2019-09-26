@@ -22,7 +22,7 @@ public class IndexController {
     ){
         Map<String,String> a = new HashMap<String,String>();
         a.put("id",id);
-        User user = restTemplate.getForObject("http://localhost:8088/getUser",User.class,a);
+        User user = restTemplate.postForObject("http://localhost:8088/getUser",a,User.class);
         return user;
     }
 }
