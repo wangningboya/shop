@@ -1,4 +1,4 @@
-package cn.wy.user1.entity;
+package cn.wy.entity;
 
 import javax.persistence.Table;
 

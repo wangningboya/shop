@@ -1,6 +1,6 @@
-package cn.wy.user1.service;
+package cn.wy.service;
 
-import cn.wy.user1.entity.User;
+import cn.wy.entity.User;
 
 public interface UserService {
 

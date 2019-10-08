@@ -1,8 +1,8 @@
-package cn.wy.user1.controller;
+package cn.wy.controller;
 
 
-import cn.wy.user1.entity.User;
-import cn.wy.user1.service.UserService;
+import cn.wy.entity.User;
+import cn.wy.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
